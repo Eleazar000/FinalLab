@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Event_Handling_webApplication.Models.tbevent>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.event_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.st_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.e_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.org_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.org_contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.max_ticket)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.available_ticket)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.state)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.event_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.st_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.e_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.org_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.org_contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.max_ticket)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.available_ticket)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.state)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.event_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.event_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.event_id })
+        </td>
+    </tr>
+}
+
+</table>

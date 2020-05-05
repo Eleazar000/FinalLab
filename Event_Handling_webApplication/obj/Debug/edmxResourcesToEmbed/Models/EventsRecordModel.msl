@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbEventsModel1StoreContainer" CdmEntityContainer="dbEventsEntities">
+    <EntitySetMapping Name="tbevents">
+      <EntityTypeMapping TypeName="dbEventsModel1.tbevent">
+        <MappingFragment StoreEntitySet="tbevent">
+          <ScalarProperty Name="event_id" ColumnName="event_id" />
+          <ScalarProperty Name="event_type" ColumnName="event_type" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="st_date" ColumnName="st_date" />
+          <ScalarProperty Name="e_date" ColumnName="e_date" />
+          <ScalarProperty Name="org_name" ColumnName="org_name" />
+          <ScalarProperty Name="org_contact" ColumnName="org_contact" />
+          <ScalarProperty Name="max_ticket" ColumnName="max_ticket" />
+          <ScalarProperty Name="available_ticket" ColumnName="available_ticket" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

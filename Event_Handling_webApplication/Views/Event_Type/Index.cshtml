@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Event_Handling_webApplication.Models.Event_Type>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.event_type1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.event_type1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.event_type_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.event_type_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.event_type_ID })
+        </td>
+    </tr>
+}
+
+</table>

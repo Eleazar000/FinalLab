@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbEventTypeModelStoreContainer" CdmEntityContainer="EventTypeEntities">
+    <EntitySetMapping Name="Event_Type">
+      <EntityTypeMapping TypeName="dbEventTypeModel.Event_Type">
+        <MappingFragment StoreEntitySet="Event_Type">
+          <ScalarProperty Name="event_type_ID" ColumnName="event_type_ID" />
+          <ScalarProperty Name="event_type1" ColumnName="event_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

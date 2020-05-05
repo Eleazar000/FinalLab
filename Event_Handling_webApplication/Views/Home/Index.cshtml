@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Event_Handling_webApplication.Models.tbevent>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Event Unlimited</h1>
+    <p class="lead">Find events near you. Never miss out again!</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="search-div">
+            <h4>Find an Event</h4>
+            @using (Html.BeginForm())
+            {
+                <p>
+                    Event name or type: @Html.TextBox("eventType")
+                    City/State: @Html.TextBox("City")
+                    @Html.ActionLink("Search", "FindEvent");
+                </p>
+            }
+        </div>
+        <br />
+        <br />
+
+
+    </div>
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+        <div class="last-min-detail-div">
+            <input type="button" value="Last minute details" class="btn btn-group" />
+            <table class="table table-bordered table-responsive table-hover">
+                <tr></tr>
+                <tr>
+                    <th>Title</th>
+                    <th>Start Date</th>
+                    <th>City</th>
+                    <th>State</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.st_date)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.city)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.state)
+                        </td>
+                    </tr>
+                }
+
+
+            </table>
+        </div>
+    </div>
+
+</div>

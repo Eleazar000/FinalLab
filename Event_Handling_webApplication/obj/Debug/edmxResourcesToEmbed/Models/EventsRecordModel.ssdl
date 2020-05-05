@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbEventsModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbevent">
+    <Key>
+      <PropertyRef Name="event_id" />
+    </Key>
+    <Property Name="event_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="event_type" Type="varchar" MaxLength="100" />
+    <Property Name="title" Type="varchar" MaxLength="200" />
+    <Property Name="description" Type="varchar" MaxLength="400" />
+    <Property Name="st_date" Type="datetime" />
+    <Property Name="e_date" Type="datetime" />
+    <Property Name="org_name" Type="varchar" MaxLength="100" />
+    <Property Name="org_contact" Type="varchar" MaxLength="100" />
+    <Property Name="max_ticket" Type="int" />
+    <Property Name="available_ticket" Type="int" />
+    <Property Name="city" Type="varchar" MaxLength="50" />
+    <Property Name="state" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="dbEventsModel1StoreContainer">
+    <EntitySet Name="tbevent" EntityType="Self.tbevent" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

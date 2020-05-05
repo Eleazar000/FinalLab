@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Event_Handling_webApplication.Models.tbevent>
+
+@{
+    ViewBag.Title = "FindEvent";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="search-div">
+            <h4>Find an Event</h4>
+            @using (Html.BeginForm())
+            {
+                <p>
+                    Event name or type: @Html.TextBox("eventType")
+                    City/State: @Html.TextBox("City")
+                    <input type="submit" value="Search" />
+                </p>
+             }
+        </div>
+        <br />
+        <br />
+        <div class="last-min-detail-div">
+            <table class="table table-bordered table-responsive table-hover">
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <th>Title</th>
+                    <th>Start Date</th>
+                    <th>City</th>
+                    <th>State</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr onclick="NavigateDetails">
+                        <td>
+                            @Html.ActionLink(".", "NavigateDetails", new { id = item.event_id })
+                            @Html.DisplayFor(modelItem => item.title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.st_date)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.city)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.state)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+</div>
+

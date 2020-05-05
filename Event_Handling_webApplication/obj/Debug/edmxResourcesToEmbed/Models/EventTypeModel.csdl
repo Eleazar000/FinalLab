@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbEventTypeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Event_Type">
+    <Key>
+      <PropertyRef Name="event_type_ID" />
+    </Key>
+    <Property Name="event_type_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="event_type1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="EventTypeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Event_Type" EntityType="Self.Event_Type" />
+  </EntityContainer>
+</Schema>

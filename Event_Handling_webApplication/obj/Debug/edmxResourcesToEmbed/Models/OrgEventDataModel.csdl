@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbEventsModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbevent">
+    <Key>
+      <PropertyRef Name="event_id" />
+    </Key>
+    <Property Name="event_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="st_date" Type="DateTime" Precision="0" />
+    <Property Name="e_date" Type="DateTime" Precision="0" />
+    <Property Name="event_type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="org_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="org_contact" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="max_ticket" Type="Int32" />
+    <Property Name="available_ticket" Type="Int32" />
+    <Property Name="state" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="dbEventsEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbevents" EntityType="Self.tbevent" />
+  </EntityContainer>
+</Schema>

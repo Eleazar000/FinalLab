@@ -1,0 +1,39 @@
+﻿@model Event_Handling_webApplication.Models.login
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+
+@using(Html.BeginForm("Submit","Login", FormMethod.Post))
+{
+<fieldset>
+    <legend>Member login Portal</legend>
+
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @if (@ViewBag.Message != null)
+    {
+        <div style="border: 1px solid red">
+            @ViewBag.Message
+            @TempData["em"]
+        </div>
+    }
+    <p>
+        <br />
+        Email: @Html.TextBox("email")
+        <br />
+        Password: @Html.TextBox("psw")
+        <br />
+        <input type="submit" value="Login" />
+    </p>
+
+</fieldset>
+}
